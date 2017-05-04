@@ -54,3 +54,22 @@ local spot2=`1'
 local latexnc1 "\newcommand{\\`spot1'}{`spot2'}"
 ! echo `latexnc1' >> `2' 
 end 
+
+*** INCLUIMOS LA ULTIMA PARTE DEL CODIGO
+
+*(2)* Use the program to send output to a file
+* NB: You could also do this in one step since you can write directly to a file.
+sysuse auto, clear
+*Create empty tex file to store new commands
+cap rm .\StataScalarList.tex
+! touch .\StataScalarList.tex
+* We want to mention the mean price in our paper 
+sum price 
+*Need to use full path to tex file because the stata working directory doesn't pass through the shell command 
+scalar meanprice=r(mean)
+latexnc meanprice "\StataScalarList.tex"
+
+*We can also round numbers if we wish 
+scalar stddevprice=round(`r(sd)',.1) 
+latexnc stddevprice "\StataScalarList.tex"
+
