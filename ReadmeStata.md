@@ -77,4 +77,5 @@ latexnc stddevprice "\StataScalarList.tex"
 * GINA DIME SI PUEDES VER ESTO!!
 **** :) *****
 *yo tambien acabo de comentar
+*No puedoooo!
 
