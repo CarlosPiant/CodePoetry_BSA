@@ -73,3 +73,6 @@ latexnc meanprice "\StataScalarList.tex"
 scalar stddevprice=round(`r(sd)',.1) 
 latexnc stddevprice "\StataScalarList.tex"
 
+* Agregar comandos para el ejercico de GitHub
+* GINA DIME SI PUEDES VER ESTO!!
+**** :) *****
