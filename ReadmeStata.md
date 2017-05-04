@@ -36,4 +36,21 @@ outreg2 using outputS.tex, tex append bdec(3) tdec(3)
 reg free_chl_yn treatw english kiswahili, robust
 outreg2 using outputS.tex, tex append bdec(3) tdec(3)
 
+* HACEMOS LA TERCERA PARTE DEL Script 
+
 ****************************************
+* To refer to specific values, you can send the output to a file, 
+* and then call that output in LaTeX
+* Thanks to Henrique Romero for this.
+****************************************
+
+*(1)* Write a little Stata program to define a new LaTeX command
+cap program drop latexnc
+program define latexnc
+*Spot is the string with the name
+local spot1="`1'"
+*Spot2 is the actual value stored in the scalar
+local spot2=`1'
+local latexnc1 "\newcommand{\\`spot1'}{`spot2'}"
+! echo `latexnc1' >> `2' 
+end 
