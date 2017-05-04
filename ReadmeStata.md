@@ -76,3 +76,6 @@ latexnc stddevprice "\StataScalarList.tex"
 * Agregar comandos para el ejercico de GitHub
 * GINA DIME SI PUEDES VER ESTO!!
 **** :) *****
+
+¿Puedes ver esta linea?
+
